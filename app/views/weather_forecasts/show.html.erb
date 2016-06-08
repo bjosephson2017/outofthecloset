@@ -40,13 +40,25 @@
 <% @weather_forecast.clothings.each do |list| %>
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title"></h3>
-    <%= clothing.name %>
+    <h3 class="panel-title">
+      <%= clothing.name %>
+    </h3>
   </div>
+
+  <% render("title") %>
+
   <div class="panel-body">
   </div>
   <div class="panel-footer">
   </div>
 </div>
-</div>
 <% end %>
+
+<div class="col-md-3">
+  <h3 class="panel-title">Add new clothing</h3>
+</div>
+<div class="panel-body">
+  <form>
+    <input>
+  </form>
+</div>
