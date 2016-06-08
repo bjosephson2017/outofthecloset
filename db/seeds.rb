@@ -4,7 +4,7 @@ csv_text = File.read(Rails.root.join('lib', 'seeds', 'clothings.csv'))
 csv = CSV.parse(csv_text, :headers => true)
 csv.each do |row|
   t = Transaction.new
-  t.weather_forecast_id = row['Weather Forecasts_id']
+  t.weather_forecast_id = row['Weather Forecast_id']
   t.size = row['city']
   t.color = row['zip']
   t.brand = row['zip']

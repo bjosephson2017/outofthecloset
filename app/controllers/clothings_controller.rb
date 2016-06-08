@@ -13,7 +13,6 @@ class ClothingsController < ApplicationController
 
   def create
     @clothing = Clothing.new
-    @clothing.theme_id = params[:theme_id]
     @clothing.weather_forecast_id = params[:weather_forecast_id]
     @clothing.size = params[:size]
     @clothing.color = params[:color]

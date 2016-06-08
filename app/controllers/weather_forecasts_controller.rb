@@ -1,5 +1,5 @@
 class WeatherForecastsController < ApplicationController
-  has_many :clothings , :class_name => "Clothing", :foreign_key => "weather_forecast_id"
+  #has_many :clothings , :class_name => "Clothing", :foreign_key => "weather_forecast_id"
   def index
     @weather_forecasts = WeatherForecast.all
   end
