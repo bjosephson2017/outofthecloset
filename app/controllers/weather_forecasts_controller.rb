@@ -20,7 +20,7 @@ class WeatherForecastsController < ApplicationController
     @weather_forecast.city = params[:city]
 
     if @weather_forecast.save
-      redirect_to "/weather_forecasts", :notice => "Weather forecast created successfully."
+      redirect_to :back, :notice => "Weather forecast created successfully."
     else
       render 'new'
     end

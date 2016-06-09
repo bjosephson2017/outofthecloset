@@ -20,7 +20,7 @@ class ClothingsController < ApplicationController
     @clothing.type = params[:type]
 
     if @clothing.save
-      redirect_to "/clothings", :notice => "Clothing created successfully."
+      redirect_to :back, :notice => "Clothing created successfully."
     else
       render 'new'
     end

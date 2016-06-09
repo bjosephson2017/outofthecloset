@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  #get "/", :controller => "clothings", :action => "new"
+  root "clothings#index"
   # Routes for the Weather_forecast resource:
   # CREATE
   get "/weather_forecasts/new", :controller => "weather_forecasts", :action => "new"
@@ -34,7 +36,7 @@ Rails.application.routes.draw do
   #------------------------------
 
   devise_for :users
-  root 'outfits#index'
+  #root 'outfits#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
