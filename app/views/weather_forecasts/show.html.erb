@@ -1,0 +1,64 @@
+<div class="page-header">
+  <h3>Weather Forecast #<%= @weather_forecast.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>Temperature f</dt>
+      <dd><%= @weather_forecast.temperature_f %></dd>
+
+      <dt>Forecast</dt>
+      <dd><%= @weather_forecast.forecast %></dd>
+
+      <dt>State</dt>
+      <dd><%= @weather_forecast.state %></dd>
+
+      <dt>City</dt>
+      <dd><%= @weather_forecast.city %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/weather_forecasts" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/weather_forecasts/<%= @weather_forecast.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_weather_forecast/<%= @weather_forecast.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>
+
+<%= Clothing.where({ :weather_forecast_id => @weather_forecast_id }) %>
+
+<div class="row">
+
+<% @weather_forecast.clothings.each do |list| %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      <%= clothing.name %>
+    </h3>
+  </div>
+
+  <% render("title") %>
+
+  <div class="panel-body">
+  </div>
+  <div class="panel-footer">
+  </div>
+</div>
+<% end %>
+
+<div class="col-md-3">
+  <h3 class="panel-title">Add new clothing</h3>
+</div>
+<div class="panel-body">
+  <form>
+    <input>
+  </form>
+</div>

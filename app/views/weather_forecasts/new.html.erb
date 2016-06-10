@@ -1,0 +1,64 @@
+<!-- Validation failure messages -->
+<% if @weather_forecast.errors.any? %>
+  <% @weather_forecast.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Weather Forecast</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_weather_forecast" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for temperature_f -->
+      <div class="form-group">
+        <label for="temperature_f" class="control-label">
+          Temperature f
+        </label>
+
+        <input type="text" id="temperature_f" name="temperature_f" placeholder="Temperature f" class="form-control" value="<%= @weather_forecast.temperature_f %>">
+      </div>
+
+      <!-- Label and input for forecast -->
+      <div class="form-group">
+        <label for="forecast" class="control-label">
+          Forecast
+        </label>
+
+        <input type="text" id="forecast" name="forecast" placeholder="Forecast" class="form-control" value="<%= @weather_forecast.forecast %>">
+      </div>
+
+      <!-- Label and input for state -->
+      <div class="form-group">
+        <label for="state" class="control-label">
+          State
+        </label>
+
+        <input type="text" id="state" name="state" placeholder="State" class="form-control" value="<%= @weather_forecast.state %>">
+      </div>
+
+      <!-- Label and input for city -->
+      <div class="form-group">
+        <label for="city" class="control-label">
+          City
+        </label>
+
+        <input type="text" id="city" name="city" placeholder="City" class="form-control" value="<%= @weather_forecast.city %>">
+      </div>
+
+      <button class="btn btn-success">
+        Create Weather Forecast
+      </button>
+      or
+      <a href="/weather_forecasts">Cancel</a>
+    </form>
+  </div>
+</div>

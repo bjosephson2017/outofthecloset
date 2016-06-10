@@ -1,0 +1,82 @@
+<!-- Validation failure messages -->
+<% if @clothing.errors.any? %>
+  <% @clothing.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Clothing</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_clothing" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for theme_id -->
+      <div class="form-group">
+        <label for="theme_id" class="control-label">
+          Theme
+        </label>
+
+        <input type="text" id="theme_id" name="theme_id" placeholder="Theme" class="form-control" value="<%= @clothing.theme_id %>">
+      </div>
+
+      <!-- Label and input for weather_forecast_id -->
+      <div class="form-group">
+        <label for="weather_forecast_id" class="control-label">
+          Weather forecast
+        </label>
+
+        <input type="text" id="weather_forecast_id" name="weather_forecast_id" placeholder="Weather forecast" class="form-control" value="<%= @clothing.weather_forecast_id %>">
+      </div>
+
+      <!-- Label and input for size -->
+      <div class="form-group">
+        <label for="size" class="control-label">
+          Size
+        </label>
+
+        <input type="text" id="size" name="size" placeholder="Size" class="form-control" value="<%= @clothing.size %>">
+      </div>
+
+      <!-- Label and input for color -->
+      <div class="form-group">
+        <label for="color" class="control-label">
+          Color
+        </label>
+
+        <input type="text" id="color" name="color" placeholder="Color" class="form-control" value="<%= @clothing.color %>">
+      </div>
+
+      <!-- Label and input for brand -->
+      <div class="form-group">
+        <label for="brand" class="control-label">
+          Brand
+        </label>
+
+        <input type="text" id="brand" name="brand" placeholder="Brand" class="form-control" value="<%= @clothing.brand %>">
+      </div>
+
+      <!-- Label and input for type -->
+      <div class="form-group">
+        <label for="type" class="control-label">
+          Type
+        </label>
+
+        <input type="text" id="type" name="type" placeholder="Type" class="form-control" value="<%= @clothing.type %>">
+      </div>
+
+      <button class="btn btn-success">
+        Create Clothing
+      </button>
+      or
+      <a href="/clothings">Cancel</a>
+    </form>
+  </div>
+</div>

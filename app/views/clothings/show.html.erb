@@ -1,0 +1,40 @@
+<div class="page-header">
+  <h3>Clothing #<%= @clothing.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>Theme</dt>
+      <dd><%= @clothing.theme_id %></dd>
+
+      <dt>Weather forecast</dt>
+      <dd><%= @clothing.weather_forecast_id %></dd>
+
+      <dt>Size</dt>
+      <dd><%= @clothing.size %></dd>
+
+      <dt>Color</dt>
+      <dd><%= @clothing.color %></dd>
+
+      <dt>Brand</dt>
+      <dd><%= @clothing.brand %></dd>
+
+      <dt>Type</dt>
+      <dd><%= @clothing.type %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/clothings" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/clothings/<%= @clothing.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_clothing/<%= @clothing.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

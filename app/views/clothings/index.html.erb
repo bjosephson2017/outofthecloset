@@ -1,0 +1,38 @@
+<div class="page-header">
+  <h1>
+    Clothings
+    <a href="/clothings/new" class="btn btn-lg btn-success">New Clothing</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Theme</th>
+        <th>Weather forecast</th>
+        <th>Size</th>
+        <th>Color</th>
+        <th>Brand</th>
+        <th>Type</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @clothings.each do |clothing| %>
+      <tr>
+        <td><%= clothing.theme_id %></td>
+        <td><%= clothing.weather_forecast_id %></td>
+        <td><%= clothing.size %></td>
+        <td><%= clothing.color %></td>
+        <td><%= clothing.brand %></td>
+        <td><%= clothing.type %></td>
+        <td>
+          <a href="/clothings/<%= clothing.id %>" class="btn btn-primary">Show</a>
+          <a href="/clothings/<%= clothing.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_clothing/<%= clothing.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
