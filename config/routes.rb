@@ -34,6 +34,9 @@ Rails.application.routes.draw do
   # DELETE
   get "/delete_clothing/:id", :controller => "clothings", :action => "destroy"
   #------------------------------
+  
+  get("/street_to_weather/new", { :controller => "meteorologist", :action => "street_to_weather_form" })
+  get("/street_to_weather", { :controller => "meteorologist", :action => "street_to_weather" })
 
   devise_for :users
   #root 'outfits#index'

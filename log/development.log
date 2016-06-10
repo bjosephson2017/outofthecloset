@@ -684,3 +684,471 @@ ActionController::RoutingError (No route matches [GET] "/users/logo.jpg"):
   Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
   Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
   Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1799.1ms)
+
+
+Started GET "/" for ::1 at 2016-06-09 18:04:57 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ClothingsController#index as HTML
+  [1m[35mClothing Load (0.0ms)[0m  SELECT "clothings".* FROM "clothings"
+  Rendered clothings/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 928ms (Views: 855.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-06-09 18:05:01 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (342.0ms)
+Completed 200 OK in 506ms (Views: 488.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-06-09 18:05:05 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 216ms (Views: 193.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/logo.jpg" for ::1 at 2016-06-09 18:05:05 -0500
+
+ActionController::RoutingError (No route matches [GET] "/users/logo.jpg"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1067.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (675.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1599.1ms)
+
+
+Started GET "/" for ::1 at 2016-06-09 18:05:09 -0500
+Processing by ClothingsController#index as HTML
+  [1m[36mClothing Load (0.0ms)[0m  [1mSELECT "clothings".* FROM "clothings"[0m
+  Rendered clothings/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 105ms (Views: 103.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weather_forecasts" for ::1 at 2016-06-09 18:05:15 -0500
+Processing by WeatherForecastsController#index as HTML
+  [1m[35mWeatherForecast Load (0.0ms)[0m  SELECT "weather_forecasts".* FROM "weather_forecasts"
+  Rendered weather_forecasts/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 186ms (Views: 148.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/weather_forecasts/new" for ::1 at 2016-06-09 18:05:20 -0500
+Processing by WeatherForecastsController#new as HTML
+  Rendered weather_forecasts/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 122ms (Views: 120.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create_weather_forecast" for ::1 at 2016-06-09 18:05:41 -0500
+Processing by WeatherForecastsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZVtw0f0nWsRPaRhCrQq6kaJh143A0tMLFN3gKYlEUzRmyvEi2KbLfBH9bdUY7Rxx7E63PTCE7wDsXe9nnIrAkQ==", "temperature_f"=>"32", "forecast"=>"cloudy", "state"=>"IL", "city"=>"highland park"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (21.0ms)[0m  INSERT INTO "weather_forecasts" ("temperature_f", "forecast", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["temperature_f", 32], ["forecast", "cloudy"], ["state", "IL"], ["city", "highland park"], ["created_at", "2016-06-09 23:05:42.017129"], ["updated_at", "2016-06-09 23:05:42.017129"]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/weather_forecasts/new
+Completed 302 Found in 62ms (ActiveRecord: 25.0ms)
+
+
+Started GET "/weather_forecasts/new" for ::1 at 2016-06-09 18:05:42 -0500
+Processing by WeatherForecastsController#new as HTML
+  Rendered weather_forecasts/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 103ms (Views: 102.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weather_forecasts" for ::1 at 2016-06-09 18:05:45 -0500
+Processing by WeatherForecastsController#index as HTML
+  [1m[35mWeatherForecast Load (0.0ms)[0m  SELECT "weather_forecasts".* FROM "weather_forecasts"
+  Rendered weather_forecasts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 104ms (Views: 103.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clothings" for ::1 at 2016-06-09 18:05:51 -0500
+Processing by ClothingsController#index as HTML
+  [1m[36mClothing Load (1.0ms)[0m  [1mSELECT "clothings".* FROM "clothings"[0m
+  Rendered clothings/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 103ms (Views: 101.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/clothings/new" for ::1 at 2016-06-09 18:05:53 -0500
+Processing by ClothingsController#new as HTML
+  Rendered clothings/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 141ms (Views: 131.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create_clothing" for ::1 at 2016-06-09 18:06:09 -0500
+Processing by ClothingsController#create as HTML
+  Parameters: {"authenticity_token"=>"taXhcUYgpvp190sgaXMhtTk9uZdgjglhVh16033TYlO2NGCCY6E3QitjPrfclIdVdxLZJ5DYNWqunXWdaB3x9g==", "theme_id"=>"winter", "weather_forecast_id"=>"32", "size"=>"34", "color"=>"red", "brand"=>"pants", "type"=>"j.crew"}
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered clothings/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 120ms (Views: 113.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/create_clothing" for ::1 at 2016-06-09 18:06:18 -0500
+Processing by ClothingsController#create as HTML
+  Parameters: {"authenticity_token"=>"U72Ysqtk04i73QROGM5BJGbavn71ug8fr+ndwSNiOrRQLBlBjuVCMOVJcdmtKefEKPXezgXsMxRXadKPNqypEQ==", "theme_id"=>"3", "weather_forecast_id"=>"32", "size"=>"34", "color"=>"red", "brand"=>"pants", "type"=>"j.crew"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered clothings/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 131ms (Views: 121.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create_clothing" for ::1 at 2016-06-09 18:06:28 -0500
+Processing by ClothingsController#create as HTML
+  Parameters: {"authenticity_token"=>"Q9ZSVxDBpwDGGijyqwyojtmuhBsQoGhNwLWMOqtEr8RAR9OkNUA2uJiOXWUe6w5ul4Hkq+D2VEY4NYN0voo8YQ==", "theme_id"=>"fall", "weather_forecast_id"=>"32", "size"=>"34", "color"=>"red", "brand"=>"pants", "type"=>"j.crew"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered clothings/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 129ms (Views: 117.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clothings" for ::1 at 2016-06-09 18:06:30 -0500
+Processing by ClothingsController#index as HTML
+  [1m[35mClothing Load (1.0ms)[0m  SELECT "clothings".* FROM "clothings"
+  Rendered clothings/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 111ms (Views: 108.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/weather_forecasts" for ::1 at 2016-06-09 19:13:21 -0500
+Processing by WeatherForecastsController#index as HTML
+  [1m[36mWeatherForecast Load (0.0ms)[0m  [1mSELECT "weather_forecasts".* FROM "weather_forecasts"[0m
+  Rendered weather_forecasts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 94ms (Views: 93.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weather_forecasts" for ::1 at 2016-06-09 19:23:46 -0500
+Processing by WeatherForecastsController#index as HTML
+  [1m[35mWeatherForecast Load (0.0ms)[0m  SELECT "weather_forecasts".* FROM "weather_forecasts"
+  Rendered weather_forecasts/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 112ms (Views: 107.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-09 19:23:47 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-09 19:23:47 -0500
+
+
+Started GET "/assets/application.self-89655ea40500a342dad2ac571974c28abab3e3897c63fef4c2d06d7564836879.js?body=1" for ::1 at 2016-06-09 19:23:47 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-09 19:23:47 -0500
+
+
+Started GET "/weather_forecasts" for ::1 at 2016-06-09 19:24:05 -0500
+Processing by WeatherForecastsController#index as HTML
+  [1m[36mWeatherForecast Load (1.0ms)[0m  [1mSELECT "weather_forecasts".* FROM "weather_forecasts"[0m
+  Rendered weather_forecasts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 100ms (Views: 98.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-09 19:24:05 -0500
+
+
+Started GET "/assets/application.self-89655ea40500a342dad2ac571974c28abab3e3897c63fef4c2d06d7564836879.js?body=1" for ::1 at 2016-06-09 19:24:05 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-09 19:24:05 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-09 19:24:05 -0500
+
+
+Started GET "/weather_forecasts" for ::1 at 2016-06-09 19:33:23 -0500
+Processing by WeatherForecastsController#index as HTML
+  [1m[35mWeatherForecast Load (0.0ms)[0m  SELECT "weather_forecasts".* FROM "weather_forecasts"
+  Rendered weather_forecasts/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 113ms (Views: 105.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-09 19:33:24 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-09 19:33:24 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-09 19:33:24 -0500
+
+
+Started GET "/assets/application.self-89655ea40500a342dad2ac571974c28abab3e3897c63fef4c2d06d7564836879.js?body=1" for ::1 at 2016-06-09 19:33:24 -0500
+
+
+Started GET "/street_to_weather/new" for ::1 at 2016-06-09 19:33:25 -0500
+Processing by MeteorologistController#street_to_weather_form as HTML
+  Rendered meteorologist/street_to_weather_form.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 99ms (Views: 98.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/street_to_weather?user_street_address=1890+maple+ave%2C+evanston%2C+il" for ::1 at 2016-06-09 19:33:35 -0500
+Processing by MeteorologistController#street_to_weather as HTML
+  Parameters: {"user_street_address"=>"1890 maple ave, evanston, il"}
+Completed 500 Internal Server Error in 270ms (ActiveRecord: 0.0ms)
+
+OpenSSL::SSL::SSLError (SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed):
+  app/controllers/meteorologist_controller.rb:27:in `street_to_weather'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (716.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (634.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1455.1ms)
+
+
+Started GET "/" for ::1 at 2016-06-09 19:36:32 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ClothingsController#index as HTML
+  [1m[35mClothing Load (0.0ms)[0m  SELECT "clothings".* FROM "clothings"
+  Rendered clothings/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 373ms (Views: 349.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weather_forecasts" for ::1 at 2016-06-09 19:36:39 -0500
+Processing by WeatherForecastsController#index as HTML
+  [1m[36mWeatherForecast Load (0.0ms)[0m  [1mSELECT "weather_forecasts".* FROM "weather_forecasts"[0m
+  Rendered weather_forecasts/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 104ms (Views: 93.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/street_to_weather/new" for ::1 at 2016-06-09 19:36:40 -0500
+Processing by MeteorologistController#street_to_weather_form as HTML
+  Rendered meteorologist/street_to_weather_form.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 105ms (Views: 104.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/street_to_weather?user_street_address=1890+maple+ave%2C+evanston%2C+il" for ::1 at 2016-06-09 19:36:47 -0500
+Processing by MeteorologistController#street_to_weather as HTML
+  Parameters: {"user_street_address"=>"1890 maple ave, evanston, il"}
+  Rendered meteorologist/street_to_weather.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 533ms (Views: 130.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-09 19:47:36 -0500
+Processing by ClothingsController#index as HTML
+  [1m[35mClothing Load (1.0ms)[0m  SELECT "clothings".* FROM "clothings"
+  Rendered clothings/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 104ms (Views: 97.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/weather_forecasts" for ::1 at 2016-06-09 19:47:38 -0500
+Processing by WeatherForecastsController#index as HTML
+  [1m[36mWeatherForecast Load (0.0ms)[0m  [1mSELECT "weather_forecasts".* FROM "weather_forecasts"[0m
+  Rendered weather_forecasts/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 153ms (Views: 145.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/street_to_weather/new" for ::1 at 2016-06-09 19:47:40 -0500
+Processing by MeteorologistController#street_to_weather_form as HTML
+  Rendered meteorologist/street_to_weather_form.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 137ms (Views: 134.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/street_to_weather?user_street_address=1890+maple+ave%2C+evanston%2C+il&user_city=evanston&user_state=il" for ::1 at 2016-06-09 19:47:48 -0500
+Processing by MeteorologistController#street_to_weather as HTML
+  Parameters: {"user_street_address"=>"1890 maple ave, evanston, il", "user_city"=>"evanston", "user_state"=>"il"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `city=' for nil:NilClass):
+  app/controllers/meteorologist_controller.rb:11:in `street_to_weather'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (709.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (642.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1487.1ms)
+
+
+Started GET "/street_to_weather?user_street_address=1890+maple+ave%2C+evanston%2C+il&user_city=evanston&user_state=il" for ::1 at 2016-06-09 19:51:10 -0500
+Processing by MeteorologistController#street_to_weather as HTML
+  Parameters: {"user_street_address"=>"1890 maple ave, evanston, il", "user_city"=>"evanston", "user_state"=>"il"}
+Completed 500 Internal Server Error in 383ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `temperature_f=' for nil:NilClass):
+  app/controllers/meteorologist_controller.rb:36:in `street_to_weather'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (697.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (652.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1495.1ms)
+
+
+Started GET "/street_to_weather?user_street_address=1890+maple+ave%2C+evanston%2C+il&user_city=evanston&user_state=il" for ::1 at 2016-06-09 19:52:38 -0500
+Processing by MeteorologistController#street_to_weather as HTML
+  Parameters: {"user_street_address"=>"1890 maple ave, evanston, il", "user_city"=>"evanston", "user_state"=>"il"}
+  Rendered meteorologist/street_to_weather.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 432ms (Views: 118.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/weather_forecasts" for ::1 at 2016-06-09 19:52:43 -0500
+Processing by WeatherForecastsController#index as HTML
+  [1m[35mWeatherForecast Load (0.0ms)[0m  SELECT "weather_forecasts".* FROM "weather_forecasts"
+  Rendered weather_forecasts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 100ms (Views: 98.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/street_to_weather/new" for ::1 at 2016-06-09 19:52:46 -0500
+Processing by MeteorologistController#street_to_weather_form as HTML
+  Rendered meteorologist/street_to_weather_form.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 102ms (Views: 101.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-09 19:55:47 -0500
+Processing by ClothingsController#index as HTML
+  [1m[36mClothing Load (1.0ms)[0m  [1mSELECT "clothings".* FROM "clothings"[0m
+  Rendered clothings/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 101ms (Views: 95.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/weather_forecasts" for ::1 at 2016-06-09 19:55:50 -0500
+Processing by WeatherForecastsController#index as HTML
+  [1m[35mWeatherForecast Load (0.0ms)[0m  SELECT "weather_forecasts".* FROM "weather_forecasts"
+  Rendered weather_forecasts/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 133ms (Views: 126.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/street_to_weather/new" for ::1 at 2016-06-09 19:55:51 -0500
+Processing by MeteorologistController#street_to_weather_form as HTML
+  Rendered meteorologist/street_to_weather_form.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 107ms (Views: 106.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/street_to_weather?user_street_address=9505+e+taos+dr%2C+scottsdale%2C+az&user_city=scottsdale&user_state=az" for ::1 at 2016-06-09 19:56:10 -0500
+Processing by MeteorologistController#street_to_weather as HTML
+  Parameters: {"user_street_address"=>"9505 e taos dr, scottsdale, az", "user_city"=>"scottsdale", "user_state"=>"az"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 758ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template meteorologist/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Brett/Documents/Kellogg/DSGN Programming/Programs/outofthecloset/outofthecloset/app/views"
+  * "C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/devise-4.1.1/app/views"
+):
+  app/controllers/meteorologist_controller.rb:50:in `street_to_weather'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (684.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (639.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1463.1ms)
+
+
+Started GET "/street_to_weather?user_street_address=9505+e+taos+dr%2C+scottsdale%2C+az&user_city=scottsdale&user_state=az" for ::1 at 2016-06-09 19:58:15 -0500
+Processing by MeteorologistController#street_to_weather as HTML
+  Parameters: {"user_street_address"=>"9505 e taos dr, scottsdale, az", "user_city"=>"scottsdale", "user_state"=>"az"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Redirected to http://localhost:3000/street_to_weather/new
+Completed 302 Found in 747ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/street_to_weather/new" for ::1 at 2016-06-09 19:58:15 -0500
+Processing by MeteorologistController#street_to_weather_form as HTML
+  Rendered meteorologist/street_to_weather_form.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 95ms (Views: 94.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weather_forecasts" for ::1 at 2016-06-09 19:58:26 -0500
+Processing by WeatherForecastsController#index as HTML
+  [1m[36mWeatherForecast Load (1.0ms)[0m  [1mSELECT "weather_forecasts".* FROM "weather_forecasts"[0m
+  Rendered weather_forecasts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 94ms (Views: 93.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-09 20:00:01 -0500
+Processing by ClothingsController#index as HTML
+  [1m[35mClothing Load (0.0ms)[0m  SELECT "clothings".* FROM "clothings"
+  Rendered clothings/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 104ms (Views: 99.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clothings" for ::1 at 2016-06-09 20:00:04 -0500
+Processing by ClothingsController#index as HTML
+  [1m[36mClothing Load (0.0ms)[0m  [1mSELECT "clothings".* FROM "clothings"[0m
+  Rendered clothings/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 107ms (Views: 106.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clothings/new" for ::1 at 2016-06-09 20:00:10 -0500
+Processing by ClothingsController#new as HTML
+  Rendered clothings/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 99ms (Views: 91.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weather_forecasts" for ::1 at 2016-06-09 20:00:16 -0500
+Processing by WeatherForecastsController#index as HTML
+  [1m[35mWeatherForecast Load (0.0ms)[0m  SELECT "weather_forecasts".* FROM "weather_forecasts"
+  Rendered weather_forecasts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 99ms (Views: 98.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/street_to_weather/new" for ::1 at 2016-06-09 20:00:23 -0500
+Processing by MeteorologistController#street_to_weather_form as HTML
+  Rendered meteorologist/street_to_weather_form.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 97ms (Views: 97.2ms | ActiveRecord: 0.0ms)
